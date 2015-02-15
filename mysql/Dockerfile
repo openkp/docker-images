@@ -19,7 +19,7 @@ USER root
 # Instalacja javy
 RUN  wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u31-b13/jdk-8u31-linux-x64.rpm" -O /tmp/jdk-8-linux-x64.rpm
 
-RUN yum -y install /tmp/jdk-8-linux-x64.rpm
+RUN yum -y install /tmp/jdk-8-linux-x64.rpm && yum clean all
 
 RUN alternatives --install /usr/bin/java jar /usr/java/latest/bin/java 200000
 RUN alternatives --install /usr/bin/javaws javaws /usr/java/latest/bin/javaws 200000
