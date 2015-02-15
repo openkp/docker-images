@@ -37,7 +37,7 @@ ENV WILDFLY_VERSION 8.2.0.Final
 # Add the WildFly distribution to /opt, and make wildfly the owner of the extracted tar content
 # Make sure the distribution is available from a well-known place
 RUN cd /opt/wildfly  
-RUN curl -O http://download.wildfly.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.zip 
+RUN curl -O http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.zip 
 RUN unzip wildfly-$WILDFLY_VERSION.zip 
 RUN mv /opt/wildfly/wildfly-$WILDFLY_VERSION /opt/wildfly/openkp 
 RUN rm wildfly-$WILDFLY_VERSION.zip
