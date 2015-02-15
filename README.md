@@ -18,6 +18,6 @@ Uruchomienie podstawowego obrazu:
 
 Uruchomienie obrazu z mysql:  
 `docker run --name openkpdb -e MYSQL_USER=mysql -e MYSQL_PASSWORD=mysql -e MYSQL_DATABASE=sample -e MYSQL_ROOT_PASSWORD=supersecret -d mysql`  
-`docker run --name openkpwildfly --link openkpdb:db -it -p 80:8080 openkp/openkp-mysql`
+`docker run --name openkpwildfly --link openkpdb:db -p 80:8080 -d openkp/openkp-mysql`
 
 Dostęp do aplikacji [http://localhost/openkp](http://localhost/openkp)
